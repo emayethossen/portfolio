@@ -37,15 +37,15 @@ const Contact = () => {
                     <h3 className="flex text-2xl font-semibold justify-center  gap-2 mb-10"><BsFillSendFill />Write me your project</h3>
                     <form className="grid relative gap-8" action="">
                         <div className="relative h-16">
-                            <label className="absolute -top-3 left-5 z-10 bg-white p-1" htmlFor="">Name</label>
+                            <label className="absolute -top-3 left-5 z-10 dark:bg-slate-800 bg-white p-1" htmlFor="">Name</label>
                             <input className="absolute top-0 left-0 w-full h-full contact-input p-6" type="text" name="user_name" placeholder="Enter your name" required />
                         </div>
                         <div className="relative h-16">
-                            <label className="absolute -top-3 left-5 z-10 bg-white p-1" htmlFor="">Email</label>
+                            <label className="absolute -top-3 left-5 z-10 dark:bg-slate-800 bg-white p-1" htmlFor="">Email</label>
                             <input className="absolute top-0 left-0 w-full h-full contact-input p-6" type="email" name="user_email" placeholder="Enter your email" required />
                         </div>
                         <div className="relative h-16">
-                            <label className="absolute -top-3 left-5 z-10 bg-white p-1" htmlFor="">Project</label>
+                            <label className="absolute -top-3 left-5 z-10 dark:bg-slate-800 bg-white p-1" htmlFor="">Project</label>
                             <textarea className="absolute top-0 left-0 w-full h-full resize-none contact-textarea p-6" name="user_project" placeholder="Write your project details"></textarea>
                         </div>
                         <button className="flex justify-center items-center bg-red-500 w-24 p-2 rounded-xl mx-auto" type="submit">Submit<BsFillSendFill /></button>

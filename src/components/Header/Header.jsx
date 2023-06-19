@@ -1,15 +1,29 @@
 import { Link } from 'react-router-dom';
 import image from '../../assets/emayethossen.png';
 import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { Typewriter } from 'react-simple-typewriter';
 import './Header.css';
 
 const Header = () => {
+
     return (
-        <section>
+        <section className=''>
             <h2 className='text-center font-semibold lg:text-4xl text-2xl my-8'>
                 Hi, I&apos;m Emayet Hossen <br />
-                Frontend Developer <br />
-                React Developer <br />
+                <span className='flex gap-2 justify-center my-4'>
+                    I&apos;m 
+                    <p className='text-3xl lg:text-5xl' style={{ color: 'hotpink', fontWeight: 'bold' }}>
+                        <Typewriter
+                            words={['Junior Web Developer', 'Frontend Web Developer', 'Web Designer', 'MERN Stack Web Developer']}
+                            loop={10}
+                            cursor
+                            cursorStyle='_'
+                            typeSpeed={70}
+                            deleteSpeed={50}
+                            delaySpeed={1000}
+                        />
+                    </p>
+                </span>
             </h2>
             <div className='grid lg:grid-cols-3 gap-12'>
                 {/* Image section */}
@@ -23,10 +37,10 @@ const Header = () => {
                         {/* <img src="" alt="" /> */}
                     </div>
                     <ul className='flex gap-8 text-3xl'>
-                        <Link to='#' target='_blank'><FaLinkedin className='text-sky-700' /></Link>
-                        <Link to='#' target='_blank'><FaTwitter className='text-sky-500' /></Link>
-                        <Link to='#' target='_blank'><FaGithub className='text-gray-600' /></Link>
-                        <Link to='#' target='_blank'><FaInstagram className='text-pink-400' /></Link>
+                        <Link to='https://www.linkedin.com/in/emayethossen' target='_blank'><FaLinkedin className='text-sky-700' /></Link>
+                        <Link to='https://twitter.com/emayethossen' target='_blank'><FaTwitter className='text-sky-500' /></Link>
+                        <Link to='https://github.com/emayethossen' target='_blank'><FaGithub className='text-gray-600' /></Link>
+                        <Link to='https://www.instagram.com/emayethossen' target='_blank'><FaInstagram className='text-pink-400' /></Link>
                     </ul>
                 </div>
 
