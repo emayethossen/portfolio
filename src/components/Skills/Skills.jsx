@@ -1,5 +1,7 @@
 import img from '../../assets/linkedin.png'
-import './Skills.css'
+import { BsBraces, BsCodeSlash } from 'react-icons/bs';
+import './Skills.css';
+
 const Skills = () => {
     return (
         <section>
@@ -9,10 +11,10 @@ const Skills = () => {
                 </h2>
                 <p className="font-semibold text-center">My favourite skills</p>
             </div>
-            <div className='grid lg:grid-cols-2 gap-8'>
+            <div className='grid lg:grid-cols-2 gap-10'>
                 {/* Skills One */}
                 <div>
-                    <h3 className='flex items-center justify-center text-3xl font-semibold mb-10'>Frontend Developer</h3>
+                    <h3 className='flex items-center justify-center gap-2 text-3xl font-semibold mb-10'><BsBraces /> Frontend Developer</h3>
                     <div className='grid grid-cols-3 gap-10 px-4'>
                         <div className='flex flex-col items-center justify-center'>
                             <div className='w-20 h-24 bg-slate-100 skill-img flex justify-center items-center mb-4'>
@@ -61,7 +63,7 @@ const Skills = () => {
 
                 {/* Skills Two */}
                 <div>
-                    <h3 className='flex items-center justify-center text-3xl font-semibold mb-10'>Backend Developer</h3>
+                    <h3 className='flex items-center justify-center gap-2 text-3xl font-semibold mb-10'><BsCodeSlash />Backend Developer</h3>
                     <div className='grid grid-cols-3 gap-10 px-4'>
                         <div className='flex flex-col items-center justify-center'>
                             <div className='w-20 h-24 bg-slate-100 skill-img flex justify-center items-center mb-4'>

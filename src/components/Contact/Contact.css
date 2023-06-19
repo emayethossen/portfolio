@@ -1,0 +1,10 @@
+.contact-input, .contact-textarea{
+    border: 2px solid gray;
+    border-radius: 2rem;
+    outline: none;
+    background: none;
+    z-index: 1;
+}
+
+.contact-textarea{
+}
