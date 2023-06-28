@@ -11,7 +11,7 @@ const Header = () => {
             <h2 className='text-center font-semibold lg:text-4xl text-2xl my-8'>
                 Hi, I&apos;m Emayet Hossen <br />
                 <span className='flex gap-2 justify-center my-4'>
-                    I&apos;m 
+                    I&apos;m
                     <p className='text-3xl lg:text-5xl' style={{ color: 'hotpink', fontWeight: 'bold' }}>
                         <Typewriter
                             words={['Junior Web Developer', 'Frontend Web Developer', 'Web Designer', 'MERN Stack Web Developer']}
@@ -59,19 +59,19 @@ const Header = () => {
                             Contact
                         </h3>
                         <p className='font-semibold pr-32'>
-                            Chattogam, Bangladesh <br />
                             emayethossen@gmail.com <br />
-                            +8801881870749
+                            +8801881870749 <br />
+                            Chattogam, Bangladesh <br />
                         </p>
                     </div>
                     <div>
                         <h3 className='mb-4 font-bold text-gray-500 uppercase'>
                             Services
                         </h3>
-                        <p className='font-semibold pr-32'>
-                            Web Design <br />
-                            Ui/ux Design <br />
-                            software development <br />
+                        <p className='font-semibold pr-32 uppercase'>
+                            Mern Stack developer <br />
+                            Frontend web developer <br />
+                            Web Designer <br />
                         </p>
                     </div>
                 </div>
@@ -82,19 +82,19 @@ const Header = () => {
                         <h3 className='mb-4 font-bold text-gray-500 uppercase'>
                             Years Of Experience
                         </h3>
-                        <p className='font-semibold pr-32 text-4xl'>8+</p>
+                        <p className='font-semibold pr-32 text-4xl'>1+</p>
                     </div>
                     <div>
                         <h3 className='mb-4 font-bold text-gray-500 uppercase'>
                             Comlpleted Projects
                         </h3>
-                        <p className='font-semibold pr-32 text-4xl'>24+</p>
+                        <p className='font-semibold pr-32 text-4xl'>10+</p>
                     </div>
                     <div>
                         <h3 className='mb-4 font-bold text-gray-500 uppercase'>
                             Companies Worked
                         </h3>
-                        <p className='font-semibold pr-32 text-4xl'>07+</p>
+                        <p className='font-semibold pr-32 text-4xl'>01+</p>
                     </div>
                 </div>
             </div>

@@ -29,7 +29,7 @@ const ThemeSwitcher = () => {
         <div>
             <button className="text-2xl bg-slate-400 p-2 rounded-lg" onClick={handleThemeSwitch}>
                 {
-                    theme === 'dark' ? <BsFillMoonFill /> : <BsFillSunFill />
+                    theme === 'dark' ? <BsFillMoonFill className="text-black" /> : <BsFillSunFill className="text-white" />
                 }
             </button>
         </div>
