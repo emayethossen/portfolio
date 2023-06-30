@@ -4,7 +4,7 @@ import Footer from "../components/Footer/Footer";
 
 const Main = () => {
     return (
-        <div className="dark:bg-slate-800 dark:text-white">
+        <div className="dark:bg-slate-800 bg-slate-100 dark:text-white">
             <Navbar />
             <Outlet />
             <Footer />

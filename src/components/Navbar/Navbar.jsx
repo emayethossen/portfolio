@@ -21,7 +21,7 @@ const Navbar = () => {
                                 <Link to='/'><span className="text-white text-3xl font-semibold"><img className='w-40 rounded-lg' src="https://i.ibb.co/Bcjb49P/RIADDD.png" alt="" /></span></Link>
                             </div>
                             <div className="hidden ml-10 lg:flex uppercase  space-x-4">
-                                <Link to='/' className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Homes</Link>
+                                <Link to='/' className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</Link>
                                 <a href='#skills' className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Skills</a>
                                 <a href='#qualification' className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Qualification</a>
                                 <a href='#projects' className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>

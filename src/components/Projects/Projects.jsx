@@ -14,8 +14,8 @@ import { Navigation, EffectCoverflow, Pagination, Mousewheel, Keyboard } from "s
 
 const Projects = () => {
    return (
-      <section>
-         <div className='my-12'>
+      <section className="py-12 lg:w-4/5 mx-auto">
+         <div className=''>
             <h2 className="text-3xl font-bold text-center">
                Projects
             </h2>
@@ -23,106 +23,8 @@ const Projects = () => {
          </div>
          <div>
             <div>
-               <div className="grid md:hidden justify-center items-center">
 
-                  <Swiper
-                     cssMode={true}
-                     navigation={true}
-                     pagination={true}
-                     mousewheel={true}
-                     keyboard={true}
-                     modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-                     className="mySwiper"
-                  >
-                     <SwiperSlide>
-
-                        {/* Project one */}
-                        <div className="py-10 w-[250px] mx-auto">
-                           <img className="w-[250px] mx-auto mb-5 rounded-xl" src="https://i.ibb.co/JRfFPQh/istockphoto-1425983331-170667a.webp" alt="" />
-                           <div className="flex flex-col items-center">
-                              <p>Web</p>
-                              <h1 className="font-semibold mb-3 text-xl">Modern Website</h1>
-                              <Link to='/'>
-                                 <button className="flex font-semibold gap-6 justify-center items-center">View Demo <FaArrowRight /></button>
-                              </Link>
-                           </div>
-                        </div>
-                     </SwiperSlide>
-                     <SwiperSlide>
-
-                        {/* Project Two */}
-                        <div className="py-10 w-[250px] mx-auto">
-                           <img className="w-[250px] mx-auto mb-5 rounded-xl" src="https://i.ibb.co/JRfFPQh/istockphoto-1425983331-170667a.webp" alt="" />
-                           <div className="flex flex-col items-center">
-                              <p>Web</p>
-                              <h1 className="font-semibold mb-3 text-xl">Modern Website</h1>
-                              <Link to='/'>
-                                 <button className="flex font-semibold gap-6 justify-center items-center">View Demo <FaArrowRight /></button>
-                              </Link>
-                           </div>
-                        </div>
-                     </SwiperSlide>
-                     <SwiperSlide>
-
-                        {/* Project Three */}
-                        <div className="py-10 w-[250px] mx-auto">
-                           <img className="w-[250px] mx-auto mb-5 rounded-xl" src="https://i.ibb.co/JRfFPQh/istockphoto-1425983331-170667a.webp" alt="" />
-                           <div className="flex flex-col items-center">
-                              <p>Web</p>
-                              <h1 className="font-semibold mb-3 text-xl">Modern Website</h1>
-                              <Link to='/'>
-                                 <button className="flex font-semibold gap-6 justify-center items-center">View Demo <FaArrowRight /></button>
-                              </Link>
-                           </div>
-                        </div>
-                     </SwiperSlide>
-                     <SwiperSlide>
-
-                        {/* Project Four */}
-                        <div className="py-10 w-[250px] mx-auto">
-                           <img className="w-[250px] mx-auto mb-5 rounded-xl" src="https://i.ibb.co/JRfFPQh/istockphoto-1425983331-170667a.webp" alt="" />
-                           <div className="flex flex-col items-center">
-                              <p>Web</p>
-                              <h1 className="font-semibold mb-3 text-xl">Modern Website</h1>
-                              <Link to='/'>
-                                 <button className="flex font-semibold gap-6 justify-center items-center">View Demo <FaArrowRight /></button>
-                              </Link>
-                           </div>
-                        </div>
-                     </SwiperSlide>
-                     <SwiperSlide>
-
-                        {/* Project Five */}
-                        <div className="py-10 w-[250px] mx-auto">
-                           <img className="w-[250px] mx-auto mb-5 rounded-xl" src="https://i.ibb.co/JRfFPQh/istockphoto-1425983331-170667a.webp" alt="" />
-                           <div className="flex flex-col items-center">
-                              <p>Web</p>
-                              <h1 className="font-semibold mb-3 text-xl">Modern Website</h1>
-                              <Link to='/'>
-                                 <button className="flex font-semibold gap-6 justify-center items-center">View Demo <FaArrowRight /></button>
-                              </Link>
-                           </div>
-                        </div>
-                     </SwiperSlide>
-                     <SwiperSlide>
-
-                        {/* Project Six */}
-                        <div className="py-10 w-[250px] mx-auto">
-                           <img className="w-[250px] mx-auto mb-5 rounded-xl" src="https://i.ibb.co/JRfFPQh/istockphoto-1425983331-170667a.webp" alt="" />
-                           <div className="flex flex-col items-center">
-                              <p>Web</p>
-                              <h1 className="font-semibold mb-3 text-xl">Modern Website</h1>
-                              <Link to='/'>
-                                 <button className="flex font-semibold gap-6 justify-center items-center">View Demo <FaArrowRight /></button>
-                              </Link>
-                           </div>
-                        </div>
-                     </SwiperSlide>
-
-                  </Swiper>
-
-               </div>
-               <div className="hidden lg:flex justify-center items-center">
+               <div className="flex justify-center items-center">
                   <Swiper
                      effect={"coverflow"}
                      grabCursor={true}
@@ -142,7 +44,7 @@ const Projects = () => {
                      modules={[EffectCoverflow, Pagination, Mousewheel, Keyboard, Navigation]}
                      className="mySwiper"
                   >
-                     <SwiperSlide>
+                     <SwiperSlide className="">
 
                         {/* Project one */}
                         <div className="py-10 w-[250px] mx-auto">
