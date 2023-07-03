@@ -4,3 +4,6 @@
     backdrop-filter: blur(4px);
     border-radius: 30px;
 }
+.head-logo{
+    font-family: 'Pacifico', cursive;
+}

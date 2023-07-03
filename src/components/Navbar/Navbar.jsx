@@ -2,6 +2,10 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css'
 import { FaHome } from "react-icons/fa";
+import { AiFillProject } from "react-icons/ai";
+import { MdCastForEducation, MdHomeRepairService } from "react-icons/md";
+import { IoMdContact } from "react-icons/io";
+import { GiSkills } from "react-icons/gi";
 import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
 
 const Navbar = () => {
@@ -18,7 +22,7 @@ const Navbar = () => {
                     <div className="flex items-center justify-between h-16">
                         <div className="flex items-center justify-between">
                             <div className="flex-shrink-0 flex z-10">
-                                <Link to='/'><span className="text-white text-3xl font-semibold"><img className='w-40 rounded-lg' src="https://i.ibb.co/Bcjb49P/RIADDD.png" alt="" /></span></Link>
+                                <Link to='/'><span className="text-white text-3xl font-semibold uppercase head-logo">Emayet</span></Link>
                             </div>
                             <div className="hidden ml-10 lg:flex uppercase  space-x-4">
                                 <Link to='/' className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</Link>
@@ -85,11 +89,11 @@ const Navbar = () => {
                     <div className="md:hidden" id="mobile-menu">
                         <div className="px-2 sm:px-3 nav-menu text-center flex flex-col justify-start w-full absolute top-0 left-0 dark:text-white items-stretch nav-menu uppercase text-black py-20 space-y-8 text-2xl">
                             <Link to='/' className="flex items-center justify-center gap-1"><FaHome />Home</Link>
-                            <a href='#skills' className="flex items-center justify-center gap-1"><FaHome />Skills</a>
-                            <a href='#qualification' className="flex items-center justify-center gap-1"><FaHome />Qualification</a>
-                            <a href='#projects' className="flex items-center justify-center gap-1"><FaHome />Projects</a>
-                            <a href='#services' className="flex items-center justify-center gap-1"><FaHome />Services</a>
-                            <a href='#contact' className="flex items-center justify-center gap-1"><FaHome />Contact</a>
+                            <a href='#skills' className="flex items-center justify-center gap-1"><GiSkills />Skills</a>
+                            <a href='#qualification' className="flex items-center justify-center gap-1"><MdCastForEducation />Qualification</a>
+                            <a href='#projects' className="flex items-center justify-center gap-1"><AiFillProject />Projects</a>
+                            <a href='#services' className="flex items-center justify-center gap-1"><MdHomeRepairService />Services</a>
+                            <a href='#contact' className="flex items-center justify-center gap-1"><IoMdContact />Contact</a>
                         </div>
                     </div>
                 )

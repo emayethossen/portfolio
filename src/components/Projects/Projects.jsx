@@ -48,11 +48,11 @@ const Projects = () => {
 
                         {/* Project one */}
                         <div className="py-10 w-[250px] mx-auto">
-                           <img className="w-[250px] mx-auto mb-5 rounded-xl" src="https://i.ibb.co/JRfFPQh/istockphoto-1425983331-170667a.webp" alt="" />
+                           <img className="w-[250px] mx-auto mb-5 rounded-xl" src="https://i.ibb.co/HpT27Fb/ggg.png" alt="" />
                            <div className="flex flex-col items-center">
                               <p>Web</p>
                               <h1 className="font-semibold mb-3 text-xl">Modern Website</h1>
-                              <Link to='/'>
+                              <Link to='https://superlative-kulfi-6fb8cf.netlify.app/' target="_blank">
                                  <button className="flex font-semibold gap-6 justify-center items-center">View Demo <FaArrowRight /></button>
                               </Link>
                            </div>
@@ -62,11 +62,11 @@ const Projects = () => {
 
                         {/* Project Two */}
                         <div className="py-10 w-[250px] mx-auto">
-                           <img className="w-[250px] mx-auto mb-5 rounded-xl" src="https://i.ibb.co/JRfFPQh/istockphoto-1425983331-170667a.webp" alt="" />
+                           <img className="w-[250px] mx-auto mb-5 rounded-xl" src="https://i.ibb.co/ydpP5NZ/fddv.png" alt="" />
                            <div className="flex flex-col items-center">
                               <p>Web</p>
                               <h1 className="font-semibold mb-3 text-xl">Modern Website</h1>
-                              <Link to='/'>
+                              <Link to='https://baby-toys-2a463.web.app/' target="_blank">
                                  <button className="flex font-semibold gap-6 justify-center items-center">View Demo <FaArrowRight /></button>
                               </Link>
                            </div>
@@ -76,11 +76,11 @@ const Projects = () => {
 
                         {/* Project Three */}
                         <div className="py-10 w-[250px] mx-auto">
-                           <img className="w-[250px] mx-auto mb-5 rounded-xl" src="https://i.ibb.co/JRfFPQh/istockphoto-1425983331-170667a.webp" alt="" />
+                           <img className="w-[250px] mx-auto mb-5 rounded-xl" src="https://i.ibb.co/MCyrqLc/fbb.png" alt="" />
                            <div className="flex flex-col items-center">
                               <p>Web</p>
                               <h1 className="font-semibold mb-3 text-xl">Modern Website</h1>
-                              <Link to='/'>
+                              <Link to='https://transcendent-salamander-db1d1a.netlify.app/' target="_blank">
                                  <button className="flex font-semibold gap-6 justify-center items-center">View Demo <FaArrowRight /></button>
                               </Link>
                            </div>
