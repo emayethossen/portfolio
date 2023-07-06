@@ -12,19 +12,19 @@ const Home = () => {
             <div>
             <Header />
             </div>
-            <div id="skills" className="bg-white">
+            <div id="skills" className="bg-white dark:bg-slate-600">
                 <Skills />
             </div>
             <div id="projects">
                 <Projects />
             </div>
-            <div id="qualification" className="bg-white">
+            <div id="qualification" className="bg-white dark:bg-slate-600">
                 <Qualification />
             </div>
             <div id="services">
                 <Services />
             </div>
-            <div id="contact" className="bg-white">
+            <div id="contact" className="bg-white dark:bg-slate-600">
                 <Contact />
             </div>
         </div>

@@ -17,19 +17,19 @@ const Qualification = () => {
                             <div className="flex flex-col gap-48 lg:mr-16">
                                 <div>
                                     <h3 className="font-semibold text-lg my-4">HSC In Science</h3>
-                                    <span className="block text-gray-500 font-semibold">Sir A.T Government College </span>
-                                    <span className="block text-gray-500 font-semibold">2019 - 2021</span>
+                                    <span className="block dark:text-white text-gray-500 font-semibold">Sir A.T Government College </span>
+                                    <span className="block dark:text-white text-gray-500 font-semibold">2019 - 2021</span>
                                 </div>
                                 <div>
                                     <h3 className="font-semibold text-lg my-4">Web Development</h3>
-                                    <span className="block text-gray-500 font-semibold">Programming Hero </span>
-                                    <span className="block text-gray-500 font-semibold">2022 - 2023</span>
+                                    <span className="block dark:text-white text-gray-500 font-semibold">Programming Hero </span>
+                                    <span className="block dark:text-white text-gray-500 font-semibold">2022 - 2023</span>
                                 </div>
                             </div>
                             <div className="lg:pl-16">
                                 <h3 className="font-semibold text-lg my-4">BSc in Mathematics</h3>
-                                <span className="block text-gray-500 font-semibold">Government City College</span>
-                                <span className="block text-gray-500 font-semibold">Present</span>
+                                <span className="block dark:text-white text-gray-500 font-semibold">Government City College</span>
+                                <span className="block dark:text-white text-gray-500 font-semibold">Present</span>
                             </div>
                         </div>
                     </div>

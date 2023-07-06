@@ -48,31 +48,31 @@ const Header = () => {
                             <Link to='https://github.com/emayethossen' target='_blank'><FaGithub className='text-gray-600' /></Link>
                             <Link to='https://www.instagram.com/emayethossen' target='_blank'><FaInstagram className='text-pink-400' /></Link>
                         </ul>
-                        <a href="https://drive.google.com/file/d/1RJBJH_qPAbZUMP_uBzCbekxtU1PUOA_l/view?usp=drive_link"><button className="btn bg-[#6495ED] text-white hover:bg-[#FF69B4]">Resume</button></a>
+                        <a href="https://drive.google.com/file/d/1RJBJH_qPAbZUMP_uBzCbekxtU1PUOA_l/view?usp=drive_link"><button className="btn border-none bg-[#6495ED] text-white hover:bg-[#FF69B4]">Resume</button></a>
                     </div>
 
                     {/* Information One */}
-                    <div className='grid gap-8 lg:ml-0 ml-12 lg:order-first'>
+                    <div className='grid gap-8 lg:ml-0 ml-4 lg:order-first'>
                         <div>
-                            <h3 className='mb-4 font-bold text-gray-500 uppercase'>
+                            <h3 className='mb-4 font-bold text-gray-500 dark:text-slate-200 uppercase'>
                                 BIOGRAPHY
                             </h3>
-                            <p className='font-semibold lg:pr-0 pr-32'>
+                            <p className='font-semibold lg:pr-0 pr-24'>
                             As a web developer, I am passionate about creating innovative and user-friendly websites. With extensive experience in frontend and backend development, I excel at implementing responsive designs and optimizing website performance. My goal is to deliver high-quality solutions that meet clients needs and exceed their expectations.
                             </p>
                         </div>
                         <div>
-                            <h3 className='mb-4 font-bold text-gray-500 uppercase'>
+                            <h3 className='mb-4 font-bold text-gray-500 dark:text-slate-200 uppercase'>
                                 Contact
                             </h3>
-                            <p className='font-semibold pr-32'>
+                            <p className='font-semibold'>
                                 emayethossen@gmail.com <br />
                                 +8801881870749 <br />
                                 Chattogam, Bangladesh <br />
                             </p>
                         </div>
                         <div>
-                            <h3 className='mb-4 font-bold text-gray-500 uppercase'>
+                            <h3 className='mb-4 font-bold text-gray-500 dark:text-slate-200 uppercase'>
                                 Services
                             </h3>
                             <p className='font-semibold pr-32 uppercase'>
@@ -84,21 +84,21 @@ const Header = () => {
                     </div>
 
                     {/* Information Two */}
-                    <div className='grid gap-8 lg:ml-0 ml-12 lg:justify-end'>
+                    <div className='grid gap-8 lg:ml-0 ml-4 lg:justify-end'>
                         <div>
-                            <h3 className='mb-4 font-bold text-gray-500 uppercase'>
+                            <h3 className='mb-4 font-bold text-gray-500 dark:text-slate-200 uppercase'>
                                 Years Of Experience
                             </h3>
                             <p className='font-semibold pr-32 text-4xl'>1+</p>
                         </div>
                         <div>
-                            <h3 className='mb-4 font-bold text-gray-500 uppercase'>
+                            <h3 className='mb-4 font-bold text-gray-500 dark:text-slate-200 uppercase'>
                                 Comlpleted Projects
                             </h3>
                             <p className='font-semibold pr-32 text-4xl'>10+</p>
                         </div>
                         <div>
-                            <h3 className='mb-4 font-bold text-gray-500 uppercase'>
+                            <h3 className='mb-4 font-bold text-gray-500 dark:text-slate-200 uppercase'>
                                 Companies Worked
                             </h3>
                             <p className='font-semibold pr-32 text-4xl'>01+</p>
