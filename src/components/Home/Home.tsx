@@ -4,6 +4,7 @@ import Projects from "../Projects/Projects";
 import Qualification from "../Qualification/Qualification";
 import Services from "../Services/Services";
 import Skills from "../Skills/Skills";
+import LatestBlog from "../Blogcard/Latestblog";
 
 
 const Home = () => {
@@ -26,6 +27,9 @@ const Home = () => {
             </div>
             <div id="contact" className="bg-white dark:bg-slate-600">
                 <Contact />
+            </div>
+            <div>
+                <LatestBlog />
             </div>
         </div>
     );

@@ -1,114 +1,98 @@
-
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import { BsBraces, BsCodeSlash } from 'react-icons/bs';
+import Skeleton from '../Skeleton/Skeleton'; 
 import './Skills.css';
-// import { useEffect } from 'react';
-// import AOS from 'aos';
-// import 'aos/dist/aos.css'
 
 const Skills = () => {
-    // useEffect(() => {
-    //     AOS.init({ duration: 2000 })
-    // }, [])
+    const [skills, setSkills] = useState([]);
+    const [frontendSkills, setFrontendSkills] = useState([]);
+    const [backendSkills, setBackendSkills] = useState([]);
+    const [loading, setLoading] = useState(true); // Loading state
+    const [loaded, setLoaded] = useState(false); // Loaded state for animation
+
+    useEffect(() => {
+        const fetchSkills = async () => {
+            try {
+                const response = await axios.get('https://my-portfolio-backend-zeta.vercel.app/api/skills'); // Adjust the API endpoint as needed
+                setSkills(response.data.skills);
+            } catch (error) {
+                console.error('Error fetching skills:', error);
+            } finally {
+                setLoading(false); // Set loading to false after fetching
+                setTimeout(() => setLoaded(true), 100); // Trigger loaded state after a short delay
+            }
+        };
+
+        fetchSkills();
+    }, []);
+
+    useEffect(() => {
+        const frontSkills = skills.filter(skill => skill.category === 'Frontend');
+        const backSkills = skills.filter(skill => skill.category === 'Backend' || skill.category === 'Database');
+        setFrontendSkills(frontSkills);
+        setBackendSkills(backSkills);
+    }, [skills]);
+
     return (
-        <section className='py-12 lg:w-4/5 mx-auto'>
-            <div className='mb-12'>
-                <h2 className="text-3xl font-bold text-center">
-                    Skills
-                </h2>
+        <section className='container py-12 lg:w-4/5 mx-auto'>
+            <div className='mb-8'>
+                <h2 className="text-3xl font-bold text-center">Skills</h2>
                 <p className="font-semibold text-center">My favourite skills</p>
             </div>
-            <div className='grid lg:grid-cols-2 gap-10'>
-                {/* Skills One */}
+
+            <div className='space-y-12'>
+
+                {/* Frontend Skills */}
                 <div>
                     <h3 className='flex items-center justify-center gap-2 text-3xl font-semibold mb-10'><BsBraces /> Frontend Developer</h3>
-                    <div className='grid grid-cols-3 gap-10 px-4'>
-
-                        <div className='flex flex-col items-center justify-center'>
-                            <div className='w-20 h-24 bg-slate-100 skill-img flex justify-center items-center mb-4'>
-                                <img className='w-10' src="https://i.ibb.co/PFFrRkr/html.png" alt="" />
-                            </div>
-                            <h3 className='font-semibold'>HTML</h3>
-                            <p className='font-semibold text-sm'>Intermediate</p>
-                        </div>
-                        <div className='flex flex-col items-center justify-center'>
-                            <div className='w-20 h-24 bg-slate-100 skill-img flex justify-center items-center mb-4'>
-                                <img className='w-10' src="https://i.ibb.co/4F7NtH2/css-3.png" alt="" />
-                            </div>
-                            <h3 className='font-semibold'>CSS</h3>
-                            <p className='font-semibold text-sm'>Intermediate</p>
-                        </div>
-                        <div className='flex flex-col items-center justify-center'>
-                            <div className='w-20 h-24 bg-slate-100 skill-img flex justify-center items-center mb-4'>
-                                <img className='w-10' src="https://i.ibb.co/0My5TKY/bootstrap.png" alt="" />
-                            </div>
-                            <h3 className='font-semibold'>Bootstrap</h3>
-                            <p className='font-semibold text-sm'>Intermediate</p>
-                        </div>
-                        <div className='flex flex-col items-center justify-center'>
-                            <div className='w-20 h-24 bg-slate-100 skill-img flex justify-center items-center mb-4'>
-                                <img className='w-10' src="https://i.ibb.co/7CDDtww/download-1.png" alt="" />
-                            </div>
-                            <h3 className='font-semibold'>Tailwind</h3>
-                            <p className='font-semibold text-sm'>Intermediate</p>
-                        </div>
-                        <div className='flex flex-col items-center justify-center'>
-                            <div className='w-20 h-24 bg-slate-100 skill-img flex justify-center items-center mb-4'>
-                                <img className='w-10' src="https://i.ibb.co/7vnc46y/js.png" alt="" />
-                            </div>
-                            <h3 className='font-semibold'>Javascript</h3>
-                            <p className='font-semibold text-sm'>Intermediate</p>
-                        </div>
-                        <div className='flex flex-col items-center justify-center'>
-                            <div className='w-20 h-24 bg-slate-100 skill-img flex justify-center items-center mb-4'>
-                                <img className='w-10' src="https://i.ibb.co/nRPFSCf/science.png" alt="" />
-                            </div>
-                            <h3 className='font-semibold'>React</h3>
-                            <p className='font-semibold text-sm'>Intermediate</p>
-                        </div>
+                    <div className='grid md:grid-cols-6 grid-cols-3 gap-10 px-4'>
+                        {loading ? (
+                            // Show skeletons while loading
+                            Array.from({ length: 6 }).map((_, index) => (
+                                <div key={index} className={`skeleton ${loaded ? 'loaded' : ''}`}>
+                                    <Skeleton />
+                                </div>
+                            ))
+                        ) : (
+                            frontendSkills.map(skill => (
+                                <div key={skill._id} className={`skill-card ${loaded ? 'loaded' : ''}`}>
+                                    <div className='w-20 h-24 bg-slate-100 skill-img flex justify-center items-center mb-4'>
+                                        <img className='w-10' src={skill.imageUrl} alt={skill.name} />
+                                    </div>
+                                    <h3 className='font-semibold'>{skill.name}</h3>
+                                    <p className='font-semibold text-sm'>{skill.proficiency}</p>
+                                </div>
+                            ))
+                        )}
                     </div>
                 </div>
 
-                {/* Skills Two */}
+                {/* Backend Skills */}
                 <div>
-                    <h3 className='flex items-center justify-center gap-2 text-3xl font-semibold mb-10'><BsCodeSlash />Backend Developer</h3>
-                    <div className='grid grid-cols-3 gap-10 px-4'>
-                        <div className='flex flex-col items-center justify-center'>
-                            <div className='w-20 h-24 bg-slate-100 skill-img flex justify-center items-center mb-4'>
-                                <img className='w-10' src="https://i.ibb.co/5kGm8wC/icons8-nodejs-48.png" alt="" />
-                            </div>
-                            <h3 className='font-semibold'>NodeJS</h3>
-                            <p className='font-semibold text-sm'>Familiar</p>
-                        </div>
-                        <div className='flex flex-col items-center justify-center'>
-                            <div className='w-20 h-24 bg-slate-100 skill-img flex justify-center items-center mb-4'>
-                                <img className='w-10' src="https://i.ibb.co/Y8p2BTS/icons8-mongodb-48.png" alt="" />
-                            </div>
-                            <h3 className='font-semibold'>MongoDB</h3>
-                            <p className='font-semibold text-sm'>Familiar</p>
-                        </div>
-                        <div className='flex flex-col items-center justify-center'>
-                            <div className='w-20 h-24 bg-slate-100 skill-img flex justify-center items-center mb-4'>
-                                <img className='w-10' src="https://i.ibb.co/TM4stFS/download.png" alt="" />
-                            </div>
-                            <h3 className='font-semibold'>Firebase</h3>
-                            <p className='font-semibold text-sm'>Comfortable</p>
-                        </div>
-                        <div className='flex flex-col items-center justify-center'>
-                            <div className='w-20 h-24 bg-slate-100 skill-img flex justify-center items-center mb-4'>
-                                <img className='w-10' src="https://i.ibb.co/fQXP3N0/download.png" alt="" />
-                            </div>
-                            <h3 className='font-semibold'>ExpressJS</h3>
-                            <p className='font-semibold text-sm'>Comfortable</p>
-                        </div>
-                        <div className='flex flex-col items-center justify-center'>
-                            <div className='w-20 h-24 bg-slate-100 skill-img flex justify-center items-center mb-4'>
-                                <img className='w-10' src="https://i.ibb.co/vhCX0d3/download-1.png" alt="" />
-                            </div>
-                            <h3 className='font-semibold'>Rest API</h3>
-                            <p className='font-semibold text-sm'>Familiar</p>
-                        </div>
+                    <h3 className='flex items-center justify-center gap-2 text-3xl font-semibold mb-10'><BsCodeSlash /> Backend Developer</h3>
+                    <div className='grid md:grid-cols-6 grid-cols-3 gap-10 px-4'>
+                        {loading ? (
+                            // Show skeletons while loading
+                            Array.from({ length: 6 }).map((_, index) => (
+                                <div key={index} className={`skeleton ${loaded ? 'loaded' : ''}`}>
+                                    <Skeleton />
+                                </div>
+                            ))
+                        ) : (
+                            backendSkills.map(skill => (
+                                <div key={skill._id} className={`skill-card ${loaded ? 'loaded' : ''}`}>
+                                    <div className='w-20 h-24 bg-slate-100 skill-img flex justify-center items-center mb-4'>
+                                        <img className='w-10' src={skill.imageUrl} alt={skill.name} />
+                                    </div>
+                                    <h3 className='font-semibold'>{skill.name}</h3>
+                                    <p className='font-semibold text-sm'>{skill.proficiency}</p>
+                                </div>
+                            ))
+                        )}
                     </div>
                 </div>
+
             </div>
         </section>
     );

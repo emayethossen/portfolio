@@ -2,7 +2,7 @@
 
 const Qualification = () => {
     return (
-        <section className="py-12">
+        <section className="container mx-auto py-12">
             <div className='mb-12'>
                 <h2 className="text-3xl font-bold text-center">
                     Qualification

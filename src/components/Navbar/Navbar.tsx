@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom';
 import './Navbar.css'
 import { FaHome } from "react-icons/fa";
 import { AiFillProject } from "react-icons/ai";
-import { MdCastForEducation, MdHomeRepairService } from "react-icons/md";
 import { IoMdContact } from "react-icons/io";
-import { GiSkills } from "react-icons/gi";
 import ThemeSwitcher from '../ThemeSwitcher/ThemeSwitcher';
 
 const Navbar = () => {
@@ -26,11 +24,9 @@ const Navbar = () => {
                             </div>
                             <div className="hidden ml-10 lg:flex uppercase  space-x-4">
                                 <Link to='/' className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</Link>
-                                <a href='#skills' className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Skills</a>
-                                <a href='#qualification' className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Qualification</a>
-                                <a href='#projects' className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
-                                <a href='#services' className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Services</a>
-                                <a href='#contact' className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                                <Link to='/projects' className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</Link>
+                                <Link to='/blogs' className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Blog</Link>
+                                <Link to='/contact' className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</Link>
 
                             </div>
 
@@ -89,11 +85,9 @@ const Navbar = () => {
                     <div className="md:hidden" id="mobile-menu">
                         <div className="px-2 sm:px-3 nav-menu text-center flex flex-col justify-start w-full absolute top-0 left-0 dark:text-white items-stretch nav-menu uppercase text-black py-20 space-y-8 text-2xl">
                             <Link to='/' className="flex items-center justify-center gap-1"><FaHome />Home</Link>
-                            <a href='#skills' className="flex items-center justify-center gap-1"><GiSkills />Skills</a>
-                            <a href='#qualification' className="flex items-center justify-center gap-1"><MdCastForEducation />Qualification</a>
-                            <a href='#projects' className="flex items-center justify-center gap-1"><AiFillProject />Projects</a>
-                            <a href='#services' className="flex items-center justify-center gap-1"><MdHomeRepairService />Services</a>
-                            <a href='#contact' className="flex items-center justify-center gap-1"><IoMdContact />Contact</a>
+                            <Link to='/blogs' className="flex items-center justify-center gap-1"><FaHome />Blog</Link>
+                            <Link to='/projects' className="flex items-center justify-center gap-1"><AiFillProject />Projects</Link>
+                            <Link to='/contact' className="flex items-center justify-center gap-1"><IoMdContact />Contact</Link>
                         </div>
                     </div>
                 )

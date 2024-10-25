@@ -12,7 +12,7 @@ const Header = () => {
     //     AOS.init({ duration: 2000 })
     // }, [])
     return (
-        <section className='lg:w-4/5 mx-auto'>
+        <section className='container lg:w-4/5 mx-auto'>
             <div className='py-12'>
                 <h2 className='text-center font-semibold lg:text-4xl text-2xl my-8'>
                     Hi, I&apos;m Emayet Hossen <br />
@@ -89,13 +89,13 @@ const Header = () => {
                             <h3 className='mb-4 font-bold text-gray-500 dark:text-slate-200 uppercase'>
                                 Years Of Experience
                             </h3>
-                            <p className='font-semibold pr-32 text-4xl'>1+</p>
+                            <p className='font-semibold pr-32 text-4xl'>3+</p>
                         </div>
                         <div>
                             <h3 className='mb-4 font-bold text-gray-500 dark:text-slate-200 uppercase'>
                                 Comlpleted Projects
                             </h3>
-                            <p className='font-semibold pr-32 text-4xl'>10+</p>
+                            <p className='font-semibold pr-32 text-4xl'>15+</p>
                         </div>
                         <div>
                             <h3 className='mb-4 font-bold text-gray-500 dark:text-slate-200 uppercase'>

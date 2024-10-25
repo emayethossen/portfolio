@@ -2,7 +2,7 @@ import './Services.css';
 
 const Services = () => {
     return (
-        <section className='lg:w-4/5 mx-auto py-12'>
+        <section className='container lg:w-4/5 mx-auto py-12'>
             <div className='mb-12'>
                 <h2 className="text-3xl font-bold text-center">
                     Services
